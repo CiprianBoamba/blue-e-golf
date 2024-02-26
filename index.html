@@ -13,21 +13,69 @@
     <title>Blue-E-Golf</title>
   </head>
   <body class="bg-gray-100 text-gray-800">
+    <!-- Header starts here -->
     <header>
+      <!-- Navigation section -->
       <nav>
-        <div class="wrapper">
-          <a href="#" class="logo">LOGO</a>
-
+        <!-- Wrapper div to control the layout and styling -->
+        <div class="wrapper mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <!-- Hamburger menu -->
           <div class="ham">
-            <div class="container">
-              <a id="menu-toggle" class="menu-toggle">
-                <span class="menu-toggle-bar menu-toggle-bar--top"></span>
-                <span class="menu-toggle-bar menu-toggle-bar--middle"></span>
-                <span class="menu-toggle-bar menu-toggle-bar--bottom"></span>
-              </a>
+            <div
+              class="container relative flex h-3 items-center justify-between"
+            >
+              <!-- Menu toggle button -->
+              <div class="left-panel">
+                <button
+                  id="menu-toggle"
+                  class="menu-toggle absolute left-6 top-1/2 transform -translate-y-1/2"
+                >
+                  <span class="menu-toggle-bar menu-toggle-bar--top"></span>
+                  <span class="menu-toggle-bar menu-toggle-bar--middle"></span>
+                  <span class="menu-toggle-bar menu-toggle-bar--bottom"></span>
+                </button>
+              </div>
+              <div
+                class="right-panel flex h-6 items-center justify-between gap-3"
+              >
+                <button class="searchIcon" aria-label="Search">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 50 50"
+                    width="24px"
+                    height="24px"
+                  >
+                    <path
+                      d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+
+                <button class="userIcon" aria-label="Login">
+                  <svg
+                    width="24px"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="User / User_Circle">
+                      <path
+                        id="Vector"
+                        d="M17.2166 19.3323C15.9349 17.9008 14.0727 17 12 17C9.92734 17 8.06492 17.9008 6.7832 19.3323M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21ZM12 14C10.3431 14 9 12.6569 9 11C9 9.34315 10.3431 8 12 8C13.6569 8 15 9.34315 15 11C15 12.6569 13.6569 14 12 14Z"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-
+          <!-- Navigation menu for hamburger-menu-->
           <ul class="main-menu">
             <li><a href="#">About</a></li>
             <li><a href="#">Products</a></li>
@@ -37,6 +85,7 @@
         </div>
       </nav>
     </header>
+    <!-- Header ends here -->
 
     <h1 class="text-3xl font-bold">Hello world!</h1>
     <div>test</div>
