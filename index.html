@@ -3,12 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Blue-E-Golf</title>
   </head>
-  <body  class="bg-gray-100 text-gray-800"></body>
+  <body class="bg-gray-100 text-gray-800">
+    <header>
+      <nav>
+        <div class="wrapper">
+          <a href="#" class="logo">LOGO</a>
+
+          <div class="ham">
+            <div class="container">
+              <a id="menu-toggle" class="menu-toggle">
+                <span class="menu-toggle-bar menu-toggle-bar--top"></span>
+                <span class="menu-toggle-bar menu-toggle-bar--middle"></span>
+                <span class="menu-toggle-bar menu-toggle-bar--bottom"></span>
+              </a>
+            </div>
+          </div>
+
+          <ul class="main-menu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
     <h1 class="text-3xl font-bold">Hello world!</h1>
     <div>test</div>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center text-gray-600 py-4 shadow-lg">
+      © 2024 Blue-E-Golf. All rights reserved.
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
     <script src="app.js"></script>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
