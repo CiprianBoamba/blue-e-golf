@@ -1,3 +1,5 @@
+/**  -- Hamburger Menu Functionality -- */
+
 const ham = document.querySelector('.ham');
 const menu = document.querySelector('ul.main-menu');
 const links = menu.querySelectorAll('li');
@@ -25,7 +27,7 @@ tl.from(
     x: -20,
     stagger: {
       amount: 0.5,
-      start: 0, // Ensure stagger starts from the first element even when reversing
+      start: 0,
     },
     ease: 'expo.inOut',
   },
@@ -40,4 +42,23 @@ ham.addEventListener('click', () => {
 
 document.getElementById('menu-toggle').addEventListener('click', function () {
   document.body.classList.toggle('nav-open');
+});
+
+/**  -- Search  Functionality -- */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const searchIcon = document.querySelector('.search-icon');
+  const closeIcon = document.querySelector('.close');
+
+  const searchToggle = (obj) => {
+    const container = obj.closest('.search-wrapper');
+    container.classList.toggle('active');
+
+    if (!container.classList.contains('active')) {
+      container.querySelector('.search-input').value = '';
+    }
+  };
+
+  searchIcon.addEventListener('click', () => searchToggle(searchIcon));
+  closeIcon.addEventListener('click', () => searchToggle(closeIcon));
 });
