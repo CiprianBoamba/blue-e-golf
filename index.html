@@ -134,6 +134,7 @@
             <a href="#">Electric and Hybrid cars</a>
             <a href="#">Finance offers and fleet</a>
             <a href="#">Volkswagen Life</a>
+            <a href="#discover">Discover</a>
           </nav>
 
           <div class="social">
@@ -154,32 +155,38 @@
     </header>
 
     <!-- Section Top Slider -->
-    <section>
-      <div class="slider" id="slider-top">
-        <div style="background-image:url('images/charging.jpg')">
-       <span> 
-           <h4 class="slide-title">e-Technology</h4>
-              <button class="slide-btn">
-                find out more
-              </button>
-      </span></div>
-        <div style="background-image:url('images/front.jpg')">
-       <span></span></div>
-       <div style="background-image:url('images/egolf.png')">
-        <span>   <h4 class="slide-title">switch to electric</h4>
-          <button class="slide-btn">
-            discover
-          </button></span></div>
-              
-               <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></i>
-               <i class="right" class="arrows" style="z-index:2; position:absolute;">
-             <svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></i>
-           </div>
-       </div>
+    <section id="top-slider">
+      <div class="top-slider">
+        <div class="slider" id="slider-top">
+          <div style="background-image:url('images/charging.jpg')">
+                <span> 
+                    <h4 class="slide-title">e-Technology</h4>
+                      <button class="slide-btn">find out more</button>
+                </span>
+          </div>
+          <div style="background-image:url('images/front.jpg')">
+              <span></span>
+          </div>
+          <div style="background-image:url('images/egolf.png')">
+                <span>   
+                  <h4 class="slide-title">switch to electric</h4>
+                    <button class="slide-btn go-section">
+                      discover
+                    </button>
+                </span>
+          </div>
+                
+                 <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></i>
+                 <i class="right" class="arrows" style="z-index:2; position:absolute;">
+               <svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></i>
+             </div>
+        </div>
+      </div>
+      
     </section>
 
     <!-- Section Why -->
-    <section>
+    <section id="why">
       <div class="choose w-full flex flex-col items-center justify-center content-center flex-wrap">
         <div class="choose-wrapper">
           <div class="chose-content">
@@ -193,12 +200,11 @@
         </div>
       </div>
     </section>
-    <!-- #0074e8 -->
+   
 <!-- Section Text Hover -->
-<section>
+<section id="text-hover">
   <div class="w-full section-text" >
     <div class="hover-text">
-
       <h1 class="text">" The New e-Golf is here</h1>
       <h1 class="text">Sustainable Mobility</h1>
       <h1 class="text">Join the Green Revolution</h1>
@@ -206,18 +212,69 @@
       <h1 class="text">Engineered for Tomorrow,</h1>
       <h1 class="text">Available Today "</h1>
     </div>
-   
   </div>
-
 </section>
     
-    <!-- Section Modal -->
+    <!-- Section Modal-Discover -->
 
-    <section>
- 
+    <section id="discover">
+      <div class="discover">
+        <div class="discover-title">
+          <h2>YOUR NEW <span>eGOLF</span> IS WAITING FOR YOU
+          </h2>
+        </div><div class="discover-content">
+          <p>Offers now available on in-stock vehicles. Take a look today and then contact your local retailer for latest stock availability. You could be driving away in a brand new eGolf sooner than you think.</p>
+        </div>
+      </div>
+      <div class="dicover-button">
 
-
-
+        <button id="add" class="register-btn">Register</button>
+      </div>
+        <div id="popup">
+           <div class="form_wrapper">
+              <button type="button" id="close"><span class="close-btn"></span></button>
+            <div class="form_container">
+              <div class="title_container">
+                <h2>Register Today</h2>
+              </div>
+              <div class="row clearfix">
+                <div class="">
+                  <form action="https://formspree.io/mvornobv" method="POST">
+                    
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                      <input type="email" name="email" placeholder="Email" required />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                      <input type="text" name="name" placeholder="First Name" />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                      <input type="text" name="name" placeholder="Last Name" required />
+                    </div>
+                  </div>
+                        <div class="input_field select_option">
+                          <select>
+                            <option>Select a country</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                          </select>
+                          <div class="select_arrow"></div>
+                        </div>
+                      <div class="input_field checkbox_option">
+                        <input type="checkbox" id="cb1">
+                    <label for="cb1">I agree with terms and conditions</label>
+                      </div>
+                      <div class="input_field checkbox_option">
+                        <input type="checkbox" id="cb2">
+                    <label for="cb2">I want to receive the newsletter</label>
+                      </div>
+                    <!-- <input class="button" type="submit" value="Register" /> -->
+                    <button type="submit" class="btn-register" value="Register">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -240,6 +297,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <!-- ScrollTrigger Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+
 
     <script src="app.js"></script>
     <!-- Tailwind CSS CDN -->

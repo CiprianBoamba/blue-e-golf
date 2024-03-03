@@ -102,6 +102,44 @@ menuToggleClose.addEventListener('click', function () {
 menuToggleOpen.addEventListener('click', () => tl.play());
 menuToggleClose.addEventListener('click', quickReverse);
 
+const navLinks = document.querySelectorAll('.menu nav a');
+
+function closeMenu() {
+  quickReverse();
+
+  gsap.to(menuToggleClose, {
+    opacity: 0,
+    duration: 0.3,
+    onComplete: () => {
+      menuToggleClose.style.visibility = 'hidden';
+      gsap.to(menuToggleOpen, {
+        opacity: 1,
+        duration: 0.3,
+        onStart: () => {
+          menuToggleOpen.style.visibility = 'visible';
+        },
+      });
+    },
+  });
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    closeMenu();
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const slideButton = document.querySelector('.go-section');
+
+  slideButton.addEventListener('click', () => {
+    gsap.to(window, {
+      scrollTo: { y: '#discover', offsetY: 50 },
+      ease: 'power2.inOut',
+    });
+  });
+});
+
 /**  -- Search Button Functionality -- */
 const searchClose = document.querySelector('.search-close');
 const searchBtn = document.querySelector('.search-btn');
@@ -234,5 +272,63 @@ textElements.forEach((text) => {
       end: 'center 20%',
       scrub: true,
     },
+  });
+});
+
+// Modal PopUp
+
+$(document).ready(function () {
+  $('.popUpBtn').on('click', function () {
+    $('#' + $(this).data('modal')).css('display', 'block');
+  });
+
+  $('span.close').on('click', function () {
+    $('.modal').css('display', 'none');
+  });
+
+  $(window).on('click', function (event) {
+    if (jQuery.inArray(event.target, $('.modal')) != '-1') {
+      $('.modal').css('display', 'none');
+    }
+  });
+});
+
+// Get the modal
+
+document.addEventListener('DOMContentLoaded', () => {
+  const popUpBtns = document.querySelectorAll('.popUpBtn');
+  popUpBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const modal = document.getElementById(btn.dataset.modal);
+      modal.style.display = 'block';
+    });
+  });
+
+  const closeSpans = document.querySelectorAll('span.close');
+  closeSpans.forEach((span) => {
+    span.addEventListener('click', () => {
+      document.querySelectorAll('.modal').forEach((modal) => {
+        modal.style.display = 'none';
+      });
+    });
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target.classList.contains('modal-content')) {
+      event.target.style.display = 'none';
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const addButton = document.getElementById('add');
+  const closeButton = document.getElementById('close');
+
+  addButton.addEventListener('click', () => {
+    document.getElementById('popup').style.display = 'block';
+  });
+
+  closeButton.addEventListener('click', () => {
+    document.getElementById('popup').style.display = 'none';
   });
 });
