@@ -1,3 +1,23 @@
+/**  -- Navbar Animation-- */
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 50) {
+    gsap.to('.main-nav', { backgroundColor: '#000000', duration: 0.5 });
+
+    gsap.to('#katman_1', { scale: 0.8, duration: 0.5 });
+
+    gsap.to('.center-line', { autoAlpha: 0, duration: 0.5 });
+
+    gsap.to('.main-logo', { marginTop: '-46px', duration: 0.5 });
+  } else {
+    gsap.to('.main-nav', { backgroundColor: 'transparent', duration: 0.5 });
+    gsap.to('#katman_1', { scale: 1, duration: 0.5 });
+
+    gsap.to('.center-line', { autoAlpha: 1, duration: 0.5 });
+
+    gsap.to('.main-logo', { marginTop: '-30px', duration: 0.5 });
+  }
+});
+
 /**  -- Hamburger Menu Functionality -- */
 
 const menuToggleOpen = document.querySelector('#menu-toggle-open');
